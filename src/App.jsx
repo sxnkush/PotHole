@@ -2,7 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Circle, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, useNavigate, NavLink, redirect } from "react-router-dom";
 import Header from "./components/Header";
 
 function LocationMarker() {
@@ -17,13 +17,10 @@ function LocationMarker() {
 
 function App() {
   const position = [31.394543488902787, 75.53321578006086]; // Delhi
-
+  const navigate = useNavigate()
   return (
     <div className="container">
       <div className="map">
-        <div className="nav">
-          <Header />
-        </div>
         <MapContainer
           center={position}
           zoom={30}
@@ -44,7 +41,7 @@ function App() {
 
       <div className="popUp">
         <h2>Want to contribute?</h2>
-        <button>Click Here</button>
+        <button onClick={() => navigate("/upload")}>Click Here</button>
       </div>
     </div>
   );

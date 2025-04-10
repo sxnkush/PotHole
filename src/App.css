@@ -2,7 +2,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-  }
+}
 
 .map
 {
@@ -31,17 +31,24 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .nav
 {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top:0;
     background-color: #fff8ee;
     padding: 20px;
     border-bottom: 1px solid gray;
 }
+
 .navbar
 {
     display: flex;
     gap:20px;
     padding-bottom: 10px;
+    margin-left: 30px;
 }
 
 .link{
@@ -76,4 +83,45 @@ button:hover
 {
     transform: scale(0.9);
     cursor: pointer;
+}
+
+
+.videoContainer
+{
+    margin-top: 150px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-left: 37%;
+}
+
+.form
+{
+    border: 2px dotted rgb(20, 110, 179);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+.head1
+{
+    color: black;
+}
+
+.head2
+{
+    color:rgb(20, 110, 179);
 }
