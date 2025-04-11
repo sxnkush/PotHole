@@ -10,7 +10,7 @@ export default function Header() {
       <Link to="/about" className="link">
         About Us
       </Link>
-      <Link to="/help" className="link">
+      <Link to="https://mee-vishal.github.io/hackmol_neural_ninjas/" className="link">
         Help
       </Link>
     </div>

@@ -15,7 +15,7 @@ const VideoUploader = () => {
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "ml_upload"); // your Cloudinary unsigned preset
+    formData.append("upload_preset", "ml_upload"); 
 
     try {
       // Step 1: Upload to Cloudinary
