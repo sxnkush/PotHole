@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"; // ✅ U
 import "./index.css";
 import Layout from "./components/Layout.jsx";
 import VideoUploader from "./components/videoUploader.jsx";
+import AboutUs from "./components/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <VideoUploader />
+      }
+    ]
+  },
+  {
+    path: "/about",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <AboutUs />
       }
     ]
   }

@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./App.css";
 import { Link, useNavigate, NavLink, redirect } from "react-router-dom";
 import Header from "./components/Header";
-import RoutingMachine from "./components/RoutingMachine"; 
+import RoutingMachine from "./components/RoutingMachine";
 import { CircleMarker, Popup } from "react-leaflet";
 import { useState } from "react";
 
@@ -21,7 +21,7 @@ function LocationMarker() {
 function App() {
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
-  const [fromCoords, setFromCoords] = useState([31.3945, 75.5332]); 
+  const [fromCoords, setFromCoords] = useState([31.3945, 75.5332]);
   const [toCoords, setToCoords] = useState([31.395, 75.534]);
   const [fromSuggestions, setFromSuggestions] = useState([]);
   const [toSuggestions, setToSuggestions] = useState([]);
@@ -168,8 +168,64 @@ function App() {
 
           <LocationMarker />
         </MapContainer>
+        <div
+        style={{
+          display: "flex",
+          flexDirection:"column",
+          justifyContent: "center",
+          gap: "1rem",
+          marginTop: "1rem",
+          flexWrap: "wrap",
+          position:"absolute",
+          top:"100px",
+          zIndex:"1000",
+          padding:"20px"
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: "yellowgreen",
+            color: "white",
+            padding: "1rem 2rem",
+            borderRadius: "8px",
+            minWidth: "10px",
+            textAlign: "center",
+          }}
+        >
+          <strong>Low</strong>
+          <br />
+          Minimal damage
+        </div>
+        <div
+          style={{
+            backgroundColor: "orange",
+            color: "black",
+            padding: "1rem 2rem",
+            borderRadius: "8px",
+            minWidth: "10px",
+            textAlign: "center",
+          }}
+        >
+          <strong>Moderate</strong>
+          <br />
+          Needs attention
+        </div>
+        <div
+          style={{
+            backgroundColor: "darkred",
+            color: "white",
+            padding: "1rem 2rem",
+            borderRadius: "8px",
+            minWidth: "10px",
+            textAlign: "center",
+          }}
+        >
+          <strong>High</strong>
+          <br />
+          Severe damage
+        </div>
       </div>
-
+      </div>
       <div className="popUp">
         <h2>Want to contribute?</h2>
         <button onClick={() => navigate("/upload")}>Click Here</button>
